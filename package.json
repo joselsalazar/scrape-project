@@ -1,0 +1,19 @@
+{
+  "name": "scrape-project",
+  "version": "1.0.0",
+  "description": "Scrape Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joselsalazar/scrape-project.git"
+  },
+  "author": "Jose Salazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joselsalazar/scrape-project/issues"
+  },
+  "homepage": "https://github.com/joselsalazar/scrape-project#readme"
+}
