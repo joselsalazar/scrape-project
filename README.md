@@ -1,4 +1,5 @@
 # scrape-project
 
 ## Tasks to Do!
-* Add Scraping Functionality
+* Add Scrape Button
+* Add Notes Functionality
