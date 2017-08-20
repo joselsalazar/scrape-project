@@ -1,17 +1,17 @@
-$("#addArticle").on("click", function() {
+$(document).on("click", "#addArticle", function() {
 	$.ajax({
 		type: "POST",
 		url: "/submit",
 		dataType: "json",
 		data: {
 			title: $("#title").val(),
-			author: $("#author").val(),
-			created: Date.now()
+			link: $("#link").val(),
+			__v: 0
 		}
 	})
 	.done(function(data) {
 		console.log(data);
-		$("#author").val("");
+		$("#link").val("");
 		$("#title").val("");
 	});
 	return false;
