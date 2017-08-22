@@ -41,7 +41,7 @@ $("#scrape").on("click", function() {
 	})
 	.done(function(data) {
 		console.log(data);
-		setTimeout(fetchData, 1500);
+		setTimeout(fetchData, 3000);
 	});
 })
 
