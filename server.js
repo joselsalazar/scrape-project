@@ -86,7 +86,11 @@ app.get("/scrape", function(req, res) {
 
       // Add the text and href of every link, and save them as properties of the result object
       result.title = $(this).children("a.listElmnt-storyHeadline").text();
-      result.link = $(this).children("p").not("span").text();
+      var fullText = $(this).children("p").text();
+      var links = $(this).children("p").children("a").text();
+      var spans = $(this).children("p").children("span").text();
+      var finalText = fullText.replace(links, "").replace(spans, "");
+      result.link = finalText;
 
       // Using our Article model, create a new entry
       // This effectively passes the result object to the entry (and the title and link)
@@ -108,6 +112,7 @@ app.get("/scrape", function(req, res) {
   });
   // Tell the browser that we finished scraping the text
   res.send("Scrape Complete");
+  console.log("Scrape Complete!");
 });
 
 app.get("/all", function(req, res) {

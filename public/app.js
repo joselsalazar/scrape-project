@@ -34,6 +34,17 @@ $(document).on("click", "#addArticle", function() {
 	return false;
 });
 
+$("#scrape").on("click", function() {
+	$.ajax({
+		method: 'GET',
+		url: '/scrape'
+	})
+	.done(function(data) {
+		console.log(data);
+		setTimeout(fetchData, 1500);
+	});
+})
+
 $(document).on("click", "#saved-articles p button", function() {
 	var thisId = $(this).attr("data-id");
 	$.ajax({
@@ -41,7 +52,7 @@ $(document).on("click", "#saved-articles p button", function() {
 		url: "/all/" + thisId
 	})
 	.done(function(data) {
-		console.log("Fetch Ran!");
+		console.log("Delete Ran!");
 		fetchData();
 	})
 })
