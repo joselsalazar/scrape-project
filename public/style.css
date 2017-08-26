@@ -1,0 +1,45 @@
+#unread, #read {
+  width: 40%;
+  background-color: antiquewhite;
+}
+
+#unread { float: left; }
+#read { float: right; }
+table, td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+#wrapper {
+  width: 960px;
+  padding-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#scrape,
+#addArticle {
+  background: blue;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px; 
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #C0FFEE;
+}
+
+#results { margin-top: 50px; }
+#userinput { font-size: 24px; }
+input {
+  width: 50%;
+  height: 36px;
+  font-size: 24px;
+}

@@ -6,7 +6,6 @@ var mongojs = require("mongojs");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
-var ember = require("ember");
 
 // Requiring Variables in Folders
 var Article = require("./models/Article.js");
@@ -91,7 +90,8 @@ app.get("/scrape", function(req, res) {
       var links = $(this).children("p").children("a").text();
       var spans = $(this).children("p").children("span").text();
       var finalText = fullText.replace(links, "").replace(spans, "");
-      result.link = finalText;
+      result.desc = finalText;
+      result.link = $(this).children("a").attr("href");
 
       // Using our Article model, create a new entry
       // This effectively passes the result object to the entry (and the title and link)

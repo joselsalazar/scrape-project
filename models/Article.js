@@ -9,6 +9,9 @@ var ArticleSchema = new Schema({
   title: {
     type: String
   },
+  desc: {
+  	type: String
+  },
   // link is a required string
   link: {
     type: String
