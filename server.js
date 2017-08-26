@@ -25,21 +25,13 @@ app.use(bodyParser.urlencoded({
 // Static file support with public folder
 app.use(express.static("public"));
 
-// Mongojs configuration
-var databaseUrl = "scrapedArticles";
-var collections = ["articles"];
-
-// Hook our mongojs config to the db var
-var db = mongojs(databaseUrl, collections);
-db.on("error", function(error) {
-  console.log("Database Error:", error);
-});
-
 // Database configuration with mongoose
+// Local Host
 // mongoose.connect("mongodb://localhost/scrapedArticles", {
 //   useMongoClient: true
 // });
 
+// Remote Host
 mongoose.connect("mongodb://heroku_8d7nmsbz:6ppg5hgcjgfs9gc45p6gdnfr0d@ds161483.mlab.com:61483/heroku_8d7nmsbz");
 var db = mongoose.connection;
 
