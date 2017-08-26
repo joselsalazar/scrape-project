@@ -36,7 +36,7 @@ db.on("error", function(error) {
 });
 
 // Database configuration with mongoose
-mongoose.connect("heroku_wtfttbjw", {
+mongoose.connect("mongodb://localhost/scrapedArticles", {
   useMongoClient: true
 });
 var db = mongoose.connection;
