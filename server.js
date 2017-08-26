@@ -36,9 +36,11 @@ db.on("error", function(error) {
 });
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/scrapedArticles", {
-  useMongoClient: true
-});
+// mongoose.connect("mongodb://localhost/scrapedArticles", {
+//   useMongoClient: true
+// });
+
+mongoose.connect("mongodb://heroku_8d7nmsbz:6ppg5hgcjgfs9gc45p6gdnfr0d@ds161483.mlab.com:61483/heroku_8d7nmsbz");
 var db = mongoose.connection;
 
 // Show any mongoose errors
